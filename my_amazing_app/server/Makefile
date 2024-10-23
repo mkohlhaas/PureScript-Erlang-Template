@@ -2,7 +2,9 @@
 
 all:
 	spago build
-	spago run
+	rm -rf ../src/compiled_ps/
+	mkdir -p ../src/compiled_ps/
+	cp -r output/* ../src/compiled_ps/
 
 repl:
 	erl -pa ebin
